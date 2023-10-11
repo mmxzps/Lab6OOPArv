@@ -6,8 +6,20 @@ using System.Threading.Tasks;
 
 namespace Lab6OOPArv
 {
-    internal class Bulldog : Dog
+    internal class Bulldog : Dog, ITame
     {
-        public string Head = "big";
+        //A propertie for bulldog, and default value
+        public string Head { get; set; } = "big";
+
+        //A constructor for making new animals.
+        public Bulldog(string name, int age) : base(name, age)
+        {
+        }
+
+        //A method for bulldog
+        public void slowRun()
+        {
+            Console.WriteLine($"{Name} runs slow ");
+        }
     }
 }
